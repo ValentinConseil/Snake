@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Snake</title>
+
+    <link rel="stylesheet" href="index.css">
+
+</head>
+<body>
+
+<div id = "difficultyBox">
+    <h3>Difficulty : </h3>
+    <button id = "easyButton">Easy</button>
+    <button id = "normalButton">Normal</button>
+    <button id = "hardButton">Hard</button>
+
+</div>
+<h3 id="scoreH3" style="display: none;">Score:<a id="score">0</a></h3>
+<canvas id="snakeGame">
+
+</canvas>
+
+
+<script src="node_modules/systemjs/dist/system.js"></script>
+<script>
+    System.config({
+        packages: {
+            '.': {
+                defaultExtensions: 'js'
+            }
+        }
+
+    });
+
+    System
+        .import('Main')
+        .then(null, console.error.bind(console));
+</script>
+
+</body>
+</html>
